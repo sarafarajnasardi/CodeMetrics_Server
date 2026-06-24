@@ -1,6 +1,9 @@
 import mongoose from 'mongoose';
 
-const uri = "mongodb+srv://sarafarajnasardi786:30DW509wBF3fdBNv@learn0.jmqha.mongodb.net/CP-leaderboard?retryWrites=true&w=majority";
+import dotenv from 'dotenv';
+dotenv.config();
+
+const uri =process.env.MONGO_URI;
 
 mongoose.connect(uri);
 
